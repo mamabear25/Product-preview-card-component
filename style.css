@@ -1,16 +1,13 @@
 body {
-    background-color: rgb(244 234 227);;
-    overflow-x: hidden;
+    /* center a div on the y axis */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(244 234 227);
     font-size: 17px;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-.container {
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
 }
 
 .main-container {
@@ -18,10 +15,23 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 50%
+}
+
+.container {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 img {
-    width: 100%
+    width: 100%;
+    display: block;
 }
 
 .perf-name {
@@ -30,8 +40,8 @@ img {
 }
 
 button {
-    width: 50%;
-    padding: 10px;
+    width: 100%;
+    padding: 15px;
     background-color:green;
     font-size: 18px;
     color: white;
@@ -41,7 +51,25 @@ button {
 }
 
 .text {
-    padding: 20px;
+    max-width: 300px;
+    padding: 20px
+}
+
+.slash {
+    font-size: 16px;
+    padding-left: 10px;
+    text-decoration:line-through;
+    color: black;
+}
+
+.space {
+    letter-spacing: 7px;
+}
+
+.amt {
+    font-size: 28px;
+    font-weight: bold;
+    color: green;
 }
 
 .attribution {
@@ -53,3 +81,17 @@ button {
 .attribution a {
     color: hsl(228, 45%, 44%); 
 }
+
+@media only screen and (max-width: 600px) {
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+  }
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+      width: 100%;
+    }
+  }
