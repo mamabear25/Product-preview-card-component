@@ -9,8 +9,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: []
-- Live Site URL: [https://replit.com/@Silver25/Product-preview-card-component#index.html]
+- Solution URL: [https://github.com/mamabear25/Product-preview-card-component]
+- Live Site URL: [https://mamabear25.github.io/Product-preview-card-component/]
 
 ## My process
 I started by giving the page a structure with html, styled it using an external style sheet and created a link within the head section of the webpage where it can be accessed.
