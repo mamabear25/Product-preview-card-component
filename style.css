@@ -1,36 +1,26 @@
 body {
     /* center a div on the y axis */
-    min-height: 100vh;
+    /* min-height: 100vh; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: hsl(30, 38%, 92%);
     font-size: 14px;
-    color: hsl(228, 12%, 48%)
-}
-
-p {
-    color: hsl(228, 12%, 48%)
-}
-
-.main-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 50%
+    color: hsl(228, 12%, 48%);
+    min-height: 100vh;
 }
 
 .container {
+    width:100%;
     background-color: white;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 10px;
     overflow: hidden;
-    margin: 10px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    max-width: 50%;
+
 }
 
 img {
@@ -94,17 +84,41 @@ button {
     color: hsl(228, 45%, 44%); 
 }
 
-/* mobile */
-@media only screen and (max-width: 375px) {
+/* Phones */
+@media (min-width:320px) and (max-width:480px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+    }
     img {
-        background-image:url('/Users/admin/Downloads/product-preview-card-component-main/images/image-product-mobile.jpg')
+        object-fit: none;
     }
-  }
+}
 
-  /* Desktop */
-@media only screen and (max-width: 1440px) {
-    /* For mobile phones: */
-    [class*="col-"] {
-      width: 100%;
+/*Small screens and laptops*/
+/* @media only screen and (min-width: 769px) and (max-width: 1024px) {
+    
+} */
+
+/* Desktops and large screens */
+/* @media only screen and (min-width: 1025px) and (max-width: 1200px) {
+    .container {
+        width: 50%;
     }
-  }
+}
+
+/* iPads - large screens */
+@media only screen and (min-width: 481px) and (max-width: 1200px) {
+    .container {
+        max-width: 100%
+    }
+}
+
+/*  Extra large screens and TV*/
+/* @media only screen and (min-width: 1201px) {
+    .container {
+        width: 100%
+    }
+} 
+  
